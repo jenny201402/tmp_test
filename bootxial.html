@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap 实例 - 基本的按钮下拉菜单</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+
+<div class="btn-group">
+    <div type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <span class="buttonText">默认</span>
+        <!--<span class="caret"></span>-->
+        <span class="caret" id="none_choose"></span>
+        <span style="display: none;" id="choose">X</span>
+    </div>
+    <ul class="dropdown-menu" role="menu">
+        <li><a href="#" onclick="shows($(this).text())">功能功能功能功能</a></li>
+        <li><a href="#" onclick="shows($(this).text())">另一个功能</a></li>
+        <li><a href="#" onclick="shows($(this).text())">其他</a></li>
+        <li><a href="#" onclick="shows($(this).text())">分离的链接</a></li>
+    </ul>
+</div>
+</body>
+<script>
+    function shows(a) {
+        $('.buttonText').text(a);
+        $('#none_choose').hide();
+        $('#choose').show();
+
+
+    }
+// $(function () {
+//     $(".btn").on('click',function () {
+//         if($('.btn') === true){
+//             $('.btn').addClass('bbtn')
+//         }else{
+//             $('.btn').removeClass('bbtn')
+//         }
+//     })
+// })
+</script>
+<style>
+    .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+         color: red;
+        background-color: #e6e6e6;
+        border-color: #ad2120;
+    }
+    .btn-default{}
+    .bbtn{background:red}
+    .btn{
+        width:180px;
+        height:130px;
+        background:#ffffff;
+        -webkit-appearance: none;
+    }
+    ul>li{
+        height: 70px;
+        /*background:#222222;*/
+    }
+</style>
+</html>

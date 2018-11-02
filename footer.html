@@ -1,0 +1,8 @@
+if(window.webkitNotifications){
+window.webkitNotifications.requestPermission();
+if(window.webkitNotifications.checkPermission() == 0){
+var obj = window.webkitNotifications.createNotification('1.png','标题','内容');
+obj.tag = 'webstorm';
+obj.show();
+}
+}
